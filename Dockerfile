@@ -52,6 +52,6 @@ EXPOSE 8080
 # Start sonarr.
 #
 
-WORKDIR /sabnzbd
+WORKDIR /sonarr
 
 CMD ["/sonarr.sh"]
