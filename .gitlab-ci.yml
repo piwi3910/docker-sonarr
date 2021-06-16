@@ -14,6 +14,7 @@ stages:
   - check_github_release
   - build
   - push
+  - dockerhub
 
 check_github_release:
   image: piwi3910/base:ubuntu_latest
@@ -94,7 +95,7 @@ push:dockerhub:latest:
     # We are just playing with Docker here. 
     # We do not need GitLab to clone the source code.
     GIT_STRATEGY: none
-  stage: push
+  stage: dockerhub
   only:
     # Only "master" should be tagged "latest"
     - master
@@ -113,7 +114,6 @@ push:dockerhub:latest:
     - docker push $dockerhub_user/$dockerhub_image:$version
   dependencies:
     - check_github_release
-    - push:latest
 
 
 # Finally, the goal here is to Docker tag any Git tag
