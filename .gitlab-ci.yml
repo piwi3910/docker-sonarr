@@ -56,7 +56,7 @@ build:
     - check_github_release
 
 # Here, the goal is to tag the "master" branch as "latest" and version number of sabnzbd
-push latest:
+push:latest:
   tags:
     - DOCKER
     - K8S
@@ -85,7 +85,7 @@ push latest:
 
 
 # Here, to dockerhub
-push latest to Dockerhub:
+push:dockerhub:latest:
   tags:
     - DOCKER
     - K8S
@@ -113,6 +113,7 @@ push latest to Dockerhub:
     - docker push $dockerhub_user/$dockerhub_image:$version
   dependencies:
     - check_github_release
+    - push:latest
 
 
 # Finally, the goal here is to Docker tag any Git tag
