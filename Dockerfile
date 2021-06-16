@@ -30,7 +30,7 @@ ADD https://download.sonarr.tv/v3/main/${SONARR_VERSION}/Sonarr.main.${SONARR_VE
 RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
     chmod 755 /sonarr.sh && \
     tar xzf /tmp/sonarr.tar.gz -C /tmp && \
-    mv /tmp/Sonarr-*/* /sonarr/ && \
+    mv /tmp/Sonarr/* /sonarr/ && \
     apk update && \
 	apk add --no-cache libmediainfo ca-certificates && \
     apk add mono --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
