@@ -42,6 +42,7 @@ build:
     # notice the cache-from, which is going to use the image we just pulled locally
     # the built image is tagged locally with the commit SHA, and then pushed to 
     # the GitLab registry
+    - echo $version
     - >
       docker build
       --pull
