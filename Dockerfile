@@ -46,7 +46,7 @@ RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
 #
 VOLUME ["/datadir", "/downloads"]
 
-EXPOSE 8080
+EXPOSE 8989
 
 #
 # Start sonarr.
