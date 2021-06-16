@@ -37,7 +37,7 @@ RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
 	update-ca-certificates && \
     chown -R sonarr: sonarr && \
     rm -rf /tmp/Son* /tmp/son* && \
-    mkdir -p /downloads
+    mkdir -p /downloads && \
     mkdir -p /media
 
 
