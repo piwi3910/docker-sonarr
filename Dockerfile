@@ -38,6 +38,7 @@ RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
     rm -rf /tmp/Son* /tmp/son* && \
     mkdir -p /downloads && \
     mkdir -p /media
+    chown -R sonarr:sonarr /media /downloads
 
 #
 # Fix mono bug not syncing ca certs into it's keystore
