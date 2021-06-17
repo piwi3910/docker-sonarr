@@ -37,7 +37,7 @@ RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
 	chown -R sonarr: sonarr && \
     rm -rf /tmp/Son* /tmp/son* && \
     mkdir -p /downloads && \
-    mkdir -p /media
+    mkdir -p /media && \
     chown -R sonarr:sonarr /media /downloads
 
 #
