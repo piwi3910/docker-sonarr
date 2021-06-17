@@ -32,10 +32,9 @@ RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
     tar xzf /tmp/sonarr.tar.gz -C /tmp && \
     mv /tmp/Sonarr/* /sonarr/ && \
     apk update && \
-	apk add --no-cache libmediainfo ca-certificates && \
+	apk add --no-cache libmediainfo && \
     apk add mono --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
-	update-ca-certificates && \
-    chown -R sonarr: sonarr && \
+	chown -R sonarr: sonarr && \
     rm -rf /tmp/Son* /tmp/son* && \
     mkdir -p /downloads && \
     mkdir -p /media
