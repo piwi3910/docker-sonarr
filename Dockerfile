@@ -39,6 +39,11 @@ RUN adduser -u 666 -D -h /sonarr -s /bin/bash sonarr sonarr && \
     mkdir -p /downloads && \
     mkdir -p /media
 
+#
+# Fix mono bug not syncing ca certs into it's keystore
+#
+RUN cert-sync /etc/ssl/certs/ca-certificates.crt
+
 
 #
 # Define container settings.
