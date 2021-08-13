@@ -16,12 +16,12 @@ ENV LANG C.UTF-8
 #
 # Specify versions of software to install.
 #
-ARG SONARR_VERSION=DEFAULT
+ARG VERSION=DEFAULT
 
 #
 # Add (download) sonarr
 #
-ADD https://download.sonarr.tv/v3/main/${SONARR_VERSION}/Sonarr.main.${SONARR_VERSION}.linux.tar.gz /tmp/sonarr.tar.gz
+ADD https://download.sonarr.tv/v3/main/${VERSION}/Sonarr.main.${VERSION}.linux.tar.gz /tmp/sonarr.tar.gz
 
 
 #
